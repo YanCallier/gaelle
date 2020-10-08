@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <!-- <script src="https://vuejs.org/js/vue.min.js"></script> -->
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <title>enigme0</title>
+</head>
+
+<body>
+    <div id="app" class="app-container">
+        <h2>{{ content.title }}</h2>
+        <div class="enigme-container" v-if="!answer">
+            <p> {{ content.question }}</p>
+            <div class="answers4 pointer">
+                <img :alt="content.answers[0].id" :src="content.answers[0].picture" onclick="resolve('0')" />
+                <img :alt="content.answers[1].id" :src="content.answers[1].picture" onclick="resolve(1)" />
+                <img :alt="content.answers[2].id" :src="content.answers[2].picture" onclick="resolve(2)" />
+                <img :alt="content.answers[3].id" :src="content.answers[3].picture" onclick="resolve(3)" />
+            </div>
+        </div>
+        <div v-if="answer">
+            <p>{{ answerTxt }}</p>
+            <div class="pointer" onclick="nextQuestion()">
+                {{ nextTxt }}
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</html>

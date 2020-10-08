@@ -1,0 +1,43 @@
+body {
+    /* background-color: black;
+    color: white; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* border: 0;
+    margin: 0; */
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.app-container {
+    /* width: 80%; */
+    max-width: 500px;
+    margin: auto;
+}
+
+.answers4 {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 10%;
+    /* background-color: #fff;
+    color: #444; */
+}
+
+.answers4 img {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    /* padding: 20px; */
+    font-size: 150%;
+    text-align: center;
+}
