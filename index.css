@@ -20,7 +20,6 @@ img {
 }
 
 .app-container {
-    /* width: 80%; */
     max-width: 500px;
     margin: auto;
 }
@@ -29,15 +28,12 @@ img {
     display: grid;
     grid-template-columns: 45% 45%;
     grid-gap: 10%;
-    /* background-color: #fff;
-    color: #444; */
 }
 
 .answers4 img {
     background-color: #444;
     color: #fff;
     border-radius: 5px;
-    /* padding: 20px; */
     font-size: 150%;
     text-align: center;
 }
