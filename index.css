@@ -31,9 +31,9 @@ img {
 }
 
 .answers4 img {
-    background-color: #444;
-    color: #fff;
+    /* background-color: #444;
+    color: #fff; */
     border-radius: 5px;
-    font-size: 150%;
+    /* font-size: 150%; */
     text-align: center;
 }

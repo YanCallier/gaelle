@@ -16,15 +16,13 @@
         <div class="enigme-container" v-if="!answer">
             <p> {{ content.question }}</p>
             <div class="answers4 pointer">
-                <img :alt="content.answers[0].id" :src="content.answers[0].picture" onclick="resolve('0')" />
-                <img :alt="content.answers[1].id" :src="content.answers[1].picture" onclick="resolve(1)" />
-                <img :alt="content.answers[2].id" :src="content.answers[2].picture" onclick="resolve(2)" />
-                <img :alt="content.answers[3].id" :src="content.answers[3].picture" onclick="resolve(3)" />
+                <img v-for="(answer, answerName) in content.answers" :alt="answerName" :src="answer.picture"
+                    v-on:click="resolve(answer, answerName)" />
             </div>
         </div>
         <div v-if="answer">
             <p>{{ answerTxt }}</p>
-            <div class="pointer" onclick="nextQuestion()">
+            <div class="pointer" v-on:click="nextQuestion()">
                 {{ nextTxt }}
             </div>
         </div>
